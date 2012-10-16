@@ -1,0 +1,38 @@
+.session_container {
+  .bookkeeper_company_name {
+    float: left; 
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+  
+  .company_name {
+    font-size: 14px; 
+    font-weight: bold;
+  }
+
+
+.content-title {
+  h1 {
+    color: #314546;
+    font-size: 120%;
+    font-weight: bold;
+    padding: 10px;
+  }
+  h2 {
+    background: url(/images/bg_shadow_h.png) no-repeat 50% 0;
+    border-top: 1px solid #d5dedf;
+    color: #314546;
+    font-weight: bold;
+    &.secondary {
+      border-top: 1px solid #d5dedf;
+      margin-bottom: 10px; 
+    }
+    &.tertiary {
+      background: none;
+      border-top: none;
+      margin-bottom: 10px;
+    }
+  }
+}
+

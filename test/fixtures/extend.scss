@@ -1,0 +1,19 @@
+.button {
+  &.blue { @include button-colors(#0099cc, white)
+  }
+  &.blue:hover { @include button-colors(#08afd8, white)
+  }
+  &.green { @include button-colors(#3d4d52, white)
+  }
+  &.orange {
+    border: 1px solid #E55414;
+    color: white;
+    background-color: #ff6633;
+    &.large {
+     background: #ff6633 url(/images/button_overlay_large.png) repeat-x 0px 0px;
+     font-weight: bold;
+     @include rounded-corner(24px); 
+    }
+  }
+}
+

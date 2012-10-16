@@ -1,0 +1,13 @@
+.something{
+  margin: 10px;
+  text-align:left;
+  p {
+    background: black;
+    border: 1px;
+    z-index: 1000;
+    h1 {
+      border-bottom: 2px;
+      font-size: 10px;
+    }
+  }
+}

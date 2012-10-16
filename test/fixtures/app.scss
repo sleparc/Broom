@@ -1,0 +1,250 @@
+@import "_constants";
+@import "_mixins";
+@import "_utils";
+
+a {
+  text-decoration: none;
+  color: #0099cc;
+  &:active {
+    outline: none;
+  }
+  &:focus {
+    -moz-outline-style: none;
+  }
+}
+
+h1 {
+  font-size: 180%;
+}
+
+h2 {
+  font-size: 120%;
+}
+
+
+/*SESSION LINKS */
+
+.session_container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 0;
+  margin: 0;
+}
+
+.session_container {
+  .bookkeeper_company_name {
+    font-weight: bold;
+    font-size: 12px;
+    float: left;
+  }
+  .company_name {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  ul.company_links {
+    margin: 0px;
+    padding: 0px;
+    li {
+      margin-top: 4px;
+      margin-left: 8px;
+      padding: 0px 0px 0px 8px;
+      float: left;
+      font-size: 11px;
+      list-style-type: none;
+      border-left: 1px dotted #cccccc;
+      &:first-child {
+        border-left: 0px dotted #cccccc;
+        padding: 0px;
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+/*CONTENT HEADERS + CONTAINERS --- THIS BREAKS HELP CONTENT */
+
+.content-title {
+  h1 {
+    color: #314546;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 1px solid #d5dedf;
+    margin-bottom: 0px;
+    font-size: 120%;
+  }
+  h2 {
+    color: #314546;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px;
+    border-top: 1px solid #d5dedf;
+    background: url(/images/bg_shadow_h.png) no-repeat 50% 0;
+    &.secondary {
+      border-top: 1px solid #d5dedf;
+      background: #e8eff1;
+      margin-bottom: 10px;
+    }
+    &.tertiary {
+      margin-bottom: 10px;
+      font-size: 14px;
+      background: none;
+      border-top: none;
+    }
+  }
+}
+
+/*----------------------------------------------------------------*/
+/*--------------------------- BUTTONS ----------------------------*/
+/*----------------------------------------------------------------*/
+input[type=submit] {
+  /*default button */
+  background: #3d4d52 url(/images/button_overlay.png) repeat-x 0px 0px;
+  @include rounded-corner(4px);
+  color: white;
+  cursor: pointer;
+  padding: 4px 16px;
+  border: 1px solid #3d4d52;
+  font-family: "Lucida Grande", arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  display: inline-block;
+  &.minimal {
+    /*mini version button */
+    background: #3d4d52 url(/images/button_overlay.png) repeat-x 0px 0px;
+    @include rounded-corner(4px);
+    color: white;
+    cursor: pointer;
+    padding: 2px 6px;
+    border: 1px solid #3d4d52;
+    font-family: "Lucida Grande", arial, sans-serif;
+    font-size: 11px;
+    line-height: 14px;
+    display: inline-block;
+  }
+}
+
+.uiButton {
+  /* general button class to apply on <label> or <a> */
+  /*     min-width: 44px; */
+  background: white url(/images/button_overlay.png) repeat-x 0px 0px;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  border: 1px solid #999999;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "lucida sans", arial, sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  padding: 6px 10px;
+  *padding: 4px 8px;
+  line-height: normal !important;
+  text-align: center;
+  vertical-align: top;
+  white-space: nowrap;
+  @include rounded-corner(4px);
+  @include box-shadow(1px, rgba(0, 0, 0, 0.25), false);
+  &:hover {
+    @include box-shadow(3px, #0099cc, true);
+    text-decoration: none;
+  }
+}
+
+.small {
+  padding: 3px 6px;
+  *padding: 1px 2px;
+}
+
+.uiButton input {
+  /* undo the default properties on <input> */
+  text-shadow: none;
+  background: none;
+  border: 0px;
+  color: #333333;
+  margin: 0px;
+  font-family: "lucida sans", arial, sans-serif;
+  font-weight: normal;
+  font-size: 13px;
+  outline: none;
+  padding: 0px 0px 0px 0px;
+  line-height: normal !important;
+  cursor: pointer;
+  &:hover {
+    /* undo the default properties on <input> */
+    background: none;
+    border: 0px;
+    cursor: pointer;
+    font-weight: normal;
+    margin: 0px;
+    color: #333333;
+    font-family: "lucida sans", arial, sans-serif;
+    font-size: 13px;
+    outline: none;
+    padding: 0px 0px 0px 0px;
+  }
+}
+
+
+/*----------------------------------------------------------------*/
+/*---------------------------- LINKS -----------------------------*/
+/*----------------------------------------------------------------*/
+a.button {
+  background: white url(/images/button_overlay.png) repeat-x -30px 0px;
+  @include rounded-corner(4px);
+  color: #222222;
+  cursor: pointer;
+  padding: 4px 16px;
+  border: 1px solid #b7b7b7;
+  font-family: "Lucida Grande", arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  display: inline-block;
+  margin: 0px;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.button {
+  &.blue { @include button-colors(#0099cc, white)
+  }
+  &.blue:hover { @include button-colors(#08afd8, white)
+  }
+  &.green { @include button-colors(#3d4d52, white)
+  }
+  &.orange {
+    background-color: #ff6633;
+    border: 1px solid #E55414;
+    color: white;
+    &.large {
+     @include rounded-corner(24px); 
+     background: #ff6633 url(/images/button_overlay_large.png) repeat-x 0px 0px;
+     font-weight: bold;
+    }
+  }
+}
+
+a.minimal {
+  background: white url(/images/button_overlay.png) repeat-x -22px 0px;
+  font-size: 11px;
+  color: #666666;
+  padding: 2px 6px;
+  border: 1px solid #d5dedf;
+  @include rounded-corner(4px);
+  float: left;
+  margin: 4px 0px;
+  &.primary {
+    background: #0099cc url(/images/button_overlay.png) repeat-x -22px 0px;
+    border: 1px solid #6699cc;
+    color: white;
+    &:hover {
+      background: #08afd8 url(/images/button_overlay.png) repeat-x -22px 0px; 
+    }
+  }
+}
+
+/* the end */
+
+
+

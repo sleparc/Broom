@@ -1,0 +1,26 @@
+input[type=submit] {
+  /*default button */
+  background: #3d4d52 url(/images/button_overlay.png) repeat-x 0px 0px;
+  @include rounded-corner(4px);
+  color: white;
+  cursor: pointer;
+  padding: 4px 16px;
+  border: 1px solid #3d4d52;
+  font-family: "Lucida Grande", arial, sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  display: inline-block;
+  &.minimal {
+    /*mini version button */
+    background: #3d4d52 url(/images/button_overlay.png) repeat-x 0px 0px;
+    @include rounded-corner(4px);
+    color: white;
+    cursor: pointer;
+    padding: 2px 6px;
+    border: 1px solid #3d4d52;
+    font-family: "Lucida Grande", arial, sans-serif;
+    font-size: 11px;
+    line-height: 14px;
+    display: inline-block;
+  }
+}

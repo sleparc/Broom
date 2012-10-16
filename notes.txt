@@ -1,0 +1,3 @@
+Probably only want to sort levels with css properties. Build dictionnary of such properties to determine is array should be sorted or not
+Do not check '{', '}' based on last char but rather presence in line
+
